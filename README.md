@@ -11,3 +11,11 @@ You write test first before writing the software code. Once the tests have been 
 ```npm test``` starts JEST on watch mode.
 
 Jest watches files and only executes tests that have changed from the last **GIT** commit. This is an optimization designed to run tests faster regardless of how many tests they are.
+
+
+### Filename Convention
+
+```.test.js```, ```.test.ts```,```.test.jsx```, ```.test.tsx``` <br/>
+```.spec.jsx```, ```.spec.tsx``` ...<br/>
+```.js```, ```.ts```, ```.jsx``` , ```.tsx``` files in ```__test__``` folders
+
