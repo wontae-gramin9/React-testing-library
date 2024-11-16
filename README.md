@@ -7,6 +7,22 @@ You write test first before writing the software code. Once the tests have been 
 
 \* Also called red-green testing as tests go from reds to green passed state as software codes written.
 
+### What to test?
+
+- If components render 
+- If components render with props 
+- If components render in different states
+- If components reacts to events
+
+### What not to test?
+
+- Implementation details
+  - Care more about how components behave, than how implemented.
+- 3rd party code
+  - Should care what I wroted, not a validate 3rd party
+- Code that is not important to users
+  - Ex, Utility functions
+
 ##### JEST WATCH MODE
 ```npm test``` starts JEST on watch mode.
 
