@@ -1,5 +1,10 @@
-export default function Greet() {
+type GreetProps = {
+  name?: string
+}
+
+export default function Greet(props: GreetProps) {
+  const {name} = props
   return (
-    <div>Hello</div>
+    <div>Hello {name}</div>
   )
 }
