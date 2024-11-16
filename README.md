@@ -23,6 +23,12 @@ Jest watches files and only executes tests that have changed from the last **GIT
 
 - statement coverage
 - Branches coverage
+  - 여기에서의 branch는 삼항연산자나 if/else의 '분기'를 말한다
+  - null coalescing이나 short circuting은 분기로 인식하지 못한다
 - Function coverage
 - Line coverage
+
+\* coverage/lcov-report/src/index.html에 coverage report가 있다.
+
+
 
