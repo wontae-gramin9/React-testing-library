@@ -12,6 +12,9 @@ You write test first before writing the software code. Once the tests have been 
 
 Jest watches files and only executes tests that have changed from the last **GIT** commit. This is an optimization designed to run tests faster regardless of how many tests they are.
 
+### JEST DOM matcher
+
+Jest is by default a testing library only for JavaScript. For Dom testing, [jest-dom](https://github.com/testing-library/jest-dom)
 
 ### Filename Convention
 
@@ -29,6 +32,3 @@ Jest watches files and only executes tests that have changed from the last **GIT
 - Line coverage
 
 \* coverage/lcov-report/src/index.html에 coverage report가 있다.
-
-
-
