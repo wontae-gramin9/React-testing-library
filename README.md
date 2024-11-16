@@ -19,3 +19,10 @@ Jest watches files and only executes tests that have changed from the last **GIT
 ```.spec.jsx```, ```.spec.tsx``` ...<br/>
 ```.js```, ```.ts```, ```.jsx``` , ```.tsx``` files in ```__test__``` folders
 
+### Code Coverage
+
+- statement coverage
+- Branches coverage
+- Function coverage
+- Line coverage
+
