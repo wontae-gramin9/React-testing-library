@@ -69,6 +69,25 @@ accessible name option:
 
 The suffix can be one of **Role, LableText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId**. 
 
+### Text match 
+
+* with Regex
+
+```js
+screen.getByText(/World/) // substring match
+screen.getByText(/world/i) // substring match, ignore case(i)
+screen.getByText(/^hello world$/i) // full string match, ignore case
+```
+* with function
+
+```js
+screen.getByText(text => text.startWith('Hello'))
+
+```
+
+
+
+
 ### JEST WATCH MODE
 ```npm test``` starts JEST on watch mode.
 
