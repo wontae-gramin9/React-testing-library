@@ -48,6 +48,12 @@ findAllBy...()
 
 ```getByRole()```: [HTML Roles](https://www.w3.org/TR/html-aria/#docconformance)
 
+accessible name option:
+- the label of a form element
+- the text content of a button or
+- the value of the aria-label attribute
+
+
 The suffix can be one of **Role, LableText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId**. 
 
 ### JEST WATCH MODE
