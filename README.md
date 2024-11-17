@@ -23,7 +23,34 @@ You write test first before writing the software code. Once the tests have been 
 - Code that is not important to users
   - Ex, Utility functions
 
-##### JEST WATCH MODE
+### Testing Process
+
+1. Render the component
+2. Find an element rendered by the component
+3. Assert against the element found in step 2 which will pass or fail the test
+
+RTL is to find and render the DOM with render(). For assertion, jest or jest-dom.
+
+### RTL Query
+
+- single Dom element
+```
+getBy...()
+queryBy...()
+findBy...()
+```
+- multiple Dom elements
+```
+getAllBy...()
+queryAllBy...()
+findAllBy...()
+```
+
+```getByRole()```: [HTML Roles](https://www.w3.org/TR/html-aria/#docconformance)
+
+The suffix can be one of **Role, LableText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId**. 
+
+### JEST WATCH MODE
 ```npm test``` starts JEST on watch mode.
 
 Jest watches files and only executes tests that have changed from the last **GIT** commit. This is an optimization designed to run tests faster regardless of how many tests they are.
