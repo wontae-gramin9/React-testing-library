@@ -54,6 +54,19 @@ accessible name option:
 - the value of the aria-label attribute
 
 
+##### Priority order for queries
+
+'The test should resember how users would interact with my code(component, page.) as much as possible'
+1. getByRole
+2. getByLabelText
+3. getByPlaceholderText
+4. getByText
+5. getByDisplayValue
+6. getByAltText
+7. getByTitle
+8. getByTestId
+
+
 The suffix can be one of **Role, LableText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId**. 
 
 ### JEST WATCH MODE
