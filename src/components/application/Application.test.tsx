@@ -9,6 +9,20 @@ describe('Application', () => {
     })
     expect(nameElement).toBeInTheDocument()
 
+    const pageHeading = screen.getByRole('heading',
+      {
+        level: 1
+      }
+    )
+    expect(pageHeading).toBeInTheDocument()
+    
+    const sectionHeading = screen.getByRole('heading',
+      {
+        level: 2
+      }
+    )
+    expect(sectionHeading).toBeInTheDocument()
+
     const bioElement = screen.getByRole('textbox',  {
       name: "Name"
     })
