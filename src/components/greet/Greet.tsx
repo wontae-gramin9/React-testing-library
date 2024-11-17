@@ -1,4 +1,4 @@
-import { GreetProps } from "./greet.types"
+import { GreetProps } from "./Greet.types"
 
 export default function Greet(props: GreetProps) {
   const {name} = props
