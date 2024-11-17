@@ -4,9 +4,7 @@ import Application from './Application';
 describe('Application', () => {
   test('renders correctly', () => {
     render(<Application/>)
-    const nameElement = screen.getByRole('textbox', {
-      name: "Name"
-    })
+    const nameElement = screen.getByDisplayValue('Wontae')
     expect(nameElement).toBeInTheDocument()
 
     const pageHeading = screen.getByRole('heading',

@@ -6,7 +6,7 @@ export default function Application() {
       <form> 
         <div>
           <label htmlFor="name">Name</label>
-          <input type='text' id='name'/>
+          <input type='text' id='name' value='Wontae' onChange={() => {}}/>
         </div>
         <div>
           <label htmlFor="bio">Bio</label>
