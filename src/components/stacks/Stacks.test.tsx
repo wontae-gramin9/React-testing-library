@@ -14,4 +14,12 @@ describe('Stacks', () => {
     const listItemElement = screen.getAllByRole('listitem')
     expect(listItemElement).toHaveLength(stacks.length)
   })
+  
+  test('not renders Start learning button', () => {
+    render(<Stacks stacks={stacks}/>)
+    const startLearningButton = screen.queryByRole('button', {
+      name: 'Start learning'
+    })
+    expect(startLearningButton).not.toBeInTheDocument()
+  })
 })

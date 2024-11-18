@@ -53,6 +53,15 @@ accessible name option:
 - the text content of a button or
 - the value of the aria-label attribute
 
+```queryBy(), queryAllBy()```
+
+returns the matching node for the query, return null if no elements match
+
+getBy...() method를 모두 queryBy...()로 사용할 수 있다.
+
+- useful for asserting an element that is not present
+  - if use getBy() for element that is not present, it throws an error as it cannot find the element
+
 
 ##### Priority order for queries
 
