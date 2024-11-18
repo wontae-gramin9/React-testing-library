@@ -57,10 +57,19 @@ accessible name option:
 
 returns the matching node for the query, return null if no elements match
 
-getBy...() method를 모두 queryBy...()로 사용할 수 있다.
-
 - useful for asserting an element that is not present
   - if use getBy() for element that is not present, it throws an error as it cannot find the element
+
+
+#### Taking Appearance & Disappearance of a DOM element into account
+
+##### What if elements are not present in the DOM to begin with, but make their way into the DOM after some time?
+For example, data fetched from a server will only be rendered after a few milleseconds.
+
+```findBy()``` returns a Promise which resolves when an element is found.
+Ofc, the Promise is rejected if no element is found or it takes more than a second.
+
+getBy...() method를 모두 queryBy...(), findBy...()로 사용할 수 있다.
 
 
 ##### Priority order for queries
