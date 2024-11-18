@@ -142,3 +142,7 @@ screen.debug() // 컴파일 에러를 내지만, 렌더링된 DOM의 모습을 �
 const view = render(<Component />) // DOM nodes의 role을 정리해서 보여준다
 logRoles(view.container)
 ```
+
+### User Interaction
+
+with a companion ```user-event``` library, we simulate user interactions by dispatching events that would happen when the interaction took place in a browser.
