@@ -131,3 +131,14 @@ Jest is by default a testing library only for JavaScript. For Dom testing, [jest
 - Line coverage
 
 \* coverage/lcov-report/src/index.html에 coverage report가 있다.
+
+### Debugging Testing
+
+```js
+screen.debug() // 컴파일 에러를 내지만, 렌더링된 DOM의 모습을 보여준다. 컴파일 에러를 내는 이유는, DOM 확인하고 지우라는 말이다.
+```
+
+```js
+const view = render(<Component />) // DOM nodes의 role을 정리해서 보여준다
+logRoles(view.container)
+```

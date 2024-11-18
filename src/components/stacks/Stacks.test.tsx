@@ -1,4 +1,4 @@
-import { render, screen} from "@testing-library/react"
+import { logRoles, render, screen} from "@testing-library/react"
 import Stacks from "./Stacks"
 
 describe('Stacks', () => {
@@ -17,7 +17,6 @@ describe('Stacks', () => {
   
   test('not renders Start learning button', () => {
     render(<Stacks stacks={stacks}/>)
-    // queryBy는 DOM이 없으면 null을 반환한다.
     const startLearningButton = screen.queryByRole('button', {
       name: 'Start learning'
     })
@@ -25,9 +24,10 @@ describe('Stacks', () => {
   })
 
   test('eventually renders Start learning button',async () => {
-    render(<Stacks stacks={stacks}/>)
-    // getByRole, queryByRole은 DOM이 screen에 나타날때까지 기다리지 않는다
-    // findBy returns a Promise which resolves when an element is found
+    // screen.debug()
+
+    const view = render(<Stacks stacks={stacks}/>)
+    logRoles(view.container)
     const startLearningButton = await screen.findByRole('button', {
       name: 'Start learning'
     }, {
