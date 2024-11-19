@@ -163,3 +163,71 @@ user.pointer('[MouseLeft][MouseRight]') // if keys are only 'keys'
 user.pointer('[MouseLeft>]') // only when pressed, not released
 user.pointer('[/MouseLeft]') // released from previous press
 ```
+
+
+
+#### Keyboard Interaction
+
+- Keyboard API
+
+```js
+keyboard('foo')
+```
+[Keyboard API](https://testing-library.com/docs/user-event/keyboard/)
+
+- Keyboard Utility API
+
+```js
+user.type(inputElement, stringValue)
+```
+- Keyboard Convenience API
+
+```js
+user.tab()
+user.clear(inputElement)
+
+test('Select and options', async () => {
+  render(
+    <select multiple>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+    </select>
+  )
+
+  // selectOptions()
+  await user.selectOptions(screen.getByRole('listbox'), ['1', 'C']) // key, value 둘 다로 선택가능
+  expect(screen.getByRole('option', {name:'A'}).selected).toBe(true)
+  expect(screen.getByRole('option', {name:'B'}).selected).toBe(false)
+  expect(screen.getByRole('option', {name:'C'}).selected).toBe(true)
+  
+  // deselectOptions()
+  await user.deselectOptions(screen.getByRole('listbox'), ['A']) 
+  expect(screen.getByRole('option', {name:'B'}).selected).toBe(false)
+})
+
+// upload
+test('File upload', async () => {
+  render(
+    <div>
+      <label for='file-uploader'>Upload file:</label>
+      <input type='file' id='file-uploader'/>
+    </div>
+  )
+
+  const file = new File(['hello'], 'hello.png', {type: 'image/png'})
+  const input = screen.getByLableText(/upload file/i)
+  await user.upload(input, file) 
+
+  expect(input.files[0]).toBe(file)
+  expect(input.files.item(0)).toBe(file)
+  expect(input.files).toHaveLength(1)
+})
+```
+
+- Keyboard Clipboard API
+```js
+user.copy()
+user.cut()
+user.paste()
+```
