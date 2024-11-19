@@ -146,3 +146,20 @@ logRoles(view.container)
 ### User Interaction
 
 with a companion ```user-event``` library, we simulate user interactions by dispatching events that would happen when the interaction took place in a browser.
+
+
+- Click convenience API
+```js
+user.click()
+user.dblclick()
+user.hover()
+user.unhover()
+```
+- Pointer low level API
+```js 
+user.pointer({keys: '[MouseLeft]' })
+user.pointer({keys: '[MouseLeft][MouseRight]' })
+user.pointer('[MouseLeft][MouseRight]') // if keys are only 'keys'
+user.pointer('[MouseLeft>]') // only when pressed, not released
+user.pointer('[/MouseLeft]') // released from previous press
+```
