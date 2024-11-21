@@ -3,4 +3,8 @@
 
 # 기본세팅은, 커밋마다 npm test 실행
 # npm test
-yarn lint && yarn format
+# 항상 모든 파일에 대해서 실행
+# yarn lint && yarn format 
+
+# staged된 파일에 대해서만 실행
+npx lint-staged
