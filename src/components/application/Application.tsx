@@ -28,7 +28,7 @@ export default function Application() {
             <input type='checkbox' id='terms'/>
             I agree to terms and conditions</label>
         </div>
-        <button>Submit</button>
+        <button disabled>Submit</button>
       </form>
     </>
   )

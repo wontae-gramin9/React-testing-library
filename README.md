@@ -231,3 +231,20 @@ user.copy()
 user.cut()
 user.paste()
 ```
+
+### Static Analysis Testing
+
+Process of verifying that the code meets certain expectations without actually running it. It analyses aspects such as readability, consistency, error handling, type checking, and alignment with best practices. In other words, how the code itself is written. Run testing and static analysis are complement to each other. 
+
+- TypeScript
+  - Type consistency
+- Eslint
+  - A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, making code more consistent and avoiding bugs
+  - 여태껏 vscode extension에 Eslint가 있었음에도 작동하지 않은 이유
+    - vscode extension 뿐만 아니라, 프로젝트에도 직접 eslint 설정을 해줘야 한다.
+    - eslint 설정을 해주면, 코드를 작성할때 vscode가 squiggly line으로 알려준다.
+    - npm script를 실행하면 프로젝트 전체를 스캔한 뒤 한번에 알려주는 것
+- Prettier
+
+- Husky
+- lint-staged
