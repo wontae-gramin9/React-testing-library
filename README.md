@@ -245,6 +245,8 @@ Process of verifying that the code meets certain expectations without actually r
     - eslint 설정을 해주면, 코드를 작성할때 vscode가 squiggly line으로 알려준다.
     - npm script를 실행하면 프로젝트 전체를 스캔한 뒤 한번에 알려주는 것
 - Prettier
-
+  - Prettier도 마찬가지로 vscode extension 뿐만 아니라, 프로젝트에도 직접 eslint 설정을 해줘야 한다.
+  - 0.0.1만 차이나도 포매팅이 달라질 수 있으니 팀원들끼리 버전 꼭 맞춰라
+  - npm script를 실행하면 프로젝트 전체를 룰에 맞춰 format해준다.
 - Husky
 - lint-staged
