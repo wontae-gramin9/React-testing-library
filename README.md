@@ -254,7 +254,10 @@ Process of verifying that the code meets certain expectations without actually r
   - 0.0.1만 차이나도 포매팅이 달라질 수 있으니 팀원들끼리 버전 꼭 맞춰라
   - npm script를 실행하면 프로젝트 전체를 룰에 맞춰 format해준다.
 - Husky
-  - Automated static analysis upon every commit
-    - By default, runs 'npm test' upon commit
+  - pre-commit
+    - Automated static analysis upon every commit
+      - By default, runs 'npm test' upon commit
+  - pre-push
+    - Automated static analysis upon every push to remote
 - lint-staged
   - run linters and formatters only on staged files
