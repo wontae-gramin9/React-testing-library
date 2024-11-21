@@ -1,3 +1,9 @@
+# React Testing Library & Static Analysis Testing
+
+![Thumbnail](https://github.com/user-attachments/assets/ca987664-f7ab-441e-88bd-3f6cbcab2bcf)
+
+[React Testing Tutorial playlist by Codevolution](https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd)
+
 ### Test Driven Development
 
 You write test first before writing the software code. Once the tests have been written, you write the code that pass the tests.
