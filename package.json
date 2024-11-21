@@ -33,7 +33,8 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "plugin:jest-dom/recommended"
+      "plugin:jest-dom/recommended",
+      "eslint-config-prettier"
     ]
   },
   "browserslist": {
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest-dom": "^5.5.0",
     "prettier": "3.3.3"
   },
