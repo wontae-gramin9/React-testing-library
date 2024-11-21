@@ -1,40 +1,40 @@
-import {render, screen} from '@testing-library/react'
-import Counter from "./Counter"
+import { render, screen } from '@testing-library/react'
+import Counter from './Counter'
 import userEvent from '@testing-library/user-event'
 
 describe('Counter', () => {
   test('renders properly', () => {
-    render(<Counter/>)
+    render(<Counter />)
     const countElement = screen.getByRole('heading')
     expect(countElement).toBeInTheDocument()
 
     const incrementButton = screen.getByRole('button', {
-      name: 'Increment'
+      name: 'Increment',
     })
     expect(incrementButton).toBeInTheDocument()
   })
 
   test('renders a count of 0', () => {
-    render(<Counter/>)
+    render(<Counter />)
     const countElement = screen.getByRole('heading')
     expect(countElement).toHaveTextContent('0')
   })
 
   test('renders a count of 1 after clicking the increment button', async () => {
-    render(<Counter/>)
+    render(<Counter />)
     const user = userEvent.setup()
     const incrementButton = screen.getByRole('button', {
-      name: 'Increment'
+      name: 'Increment',
     })
     await user.click(incrementButton)
     const countElement = screen.getByRole('heading')
     expect(countElement).toHaveTextContent('1')
   })
   test('renders a count of 10 after clicking the set button', async () => {
-    render(<Counter/>)
+    render(<Counter />)
     const user = userEvent.setup()
     const setButton = screen.getByRole('button', {
-      name: 'Set'
+      name: 'Set',
     })
     const input = screen.getByRole('spinbutton')
     await user.type(input, '10')
@@ -44,14 +44,14 @@ describe('Counter', () => {
   })
 
   test('elements are focused in the right order', async () => {
-    render(<Counter/>)
+    render(<Counter />)
     const user = userEvent.setup()
     const incrementButton = screen.getByRole('button', {
-      name: 'Increment'
+      name: 'Increment',
     })
     const input = screen.getByRole('spinbutton')
     const setButton = screen.getByRole('button', {
-      name: 'Set'
+      name: 'Set',
     })
     await user.tab()
     expect(incrementButton).toHaveFocus()
