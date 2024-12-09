@@ -1,5 +1,7 @@
 # React Testing Library & Static Analysis Testing
 
+## [PREREQUISITE - JEST tutorial study log repository](https://github.com/wontae-gramin9/jest-tutorial)
+
 ![Thumbnail](https://github.com/user-attachments/assets/ca987664-f7ab-441e-88bd-3f6cbcab2bcf)
 
 [React Testing Tutorial playlist by Codevolution](https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd)
